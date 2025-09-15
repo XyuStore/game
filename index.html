@@ -3,19 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Slot Game</title>
+    <title>Gates of Olympus - Demo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Simple Scatter Slot</h1>
-    <div id="game-container">
-        <div id="slot-grid"></div>
-    </div>
-    <div id="controls">
-        <button id="spin-button">SPIN</button>
-    </div>
-    <div id="message-area">
-        <p>Tekan Spin untuk memulai!</p>
+    <div class="game-wrapper">
+        <header>
+            <h1>GATES OF OLYMPUS</h1>
+            <div class="win-display">TOTAL WIN: <span id="total-win">0</span></div>
+        </header>
+
+        <div id="game-container">
+            <div id="multiplier-display" class="hidden"></div>
+            <div id="slot-grid"></div>
+        </div>
+
+        <footer>
+            <div class="balance-info">
+                <div class="info-box">
+                    <span>BALANCE</span>
+                    <span id="balance-amount">1000</span>
+                </div>
+                <div class="info-box">
+                    <span>BET</span>
+                    <span id="bet-amount">10</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="spin-button" title="Spin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 251.455-243.03 251.455C102.284 416.816 0 314.533 0 195.816 0 137.229 28.32 82.126 71.93 44.026c43.613-38.1 101.62-62.126 165.07-62.126 23.645 0 46.533 4.195 68.13 12.163L289.47 64H432v142.53l-64.47-64.47c-12.16 8.98-24.64 18.98-36.86 29.65zM256 128c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="auto-spin-controls">
+                <label for="auto-spin-toggle">AUTO SPIN</label>
+                <input type="checkbox" id="auto-spin-toggle">
+            </div>
+        </footer>
     </div>
 
     <script src="script.js"></script>
